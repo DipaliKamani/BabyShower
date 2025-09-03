@@ -6,9 +6,10 @@
   <title>Dipali's Baby Shower RSVP</title>
   <style>
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Comic Neue';
       background: linear-gradient(to bottom right, #ffe6f0, #d6f0ff); /* pink + blue background */
       display: flex;
+      font-weight: bold;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
@@ -26,6 +27,31 @@
       border: 8px solid;
       border-image: linear-gradient(45deg, #ff80ab, #80bfff) 1; /* pink-blue border */
     }
+
+    .rsvp-form input,
+    .rsvp-form select,
+    .rsvp-form textarea {
+      -webkit-appearance: none; /* Remove iOS default styles */
+      -moz-appearance: none;    /* Remove Firefox default styles */
+      appearance: none;
+      
+      height: 45px;             /* Force same height */
+      line-height: 1.2;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+.rsvp-form select {
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23ff69b4' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 40px; /* Space for arrow */
+}
     /* Baby icons at the top */
     .baby-icons {
       font-size: 2.8rem;
@@ -140,47 +166,44 @@
 
     <!-- Top bouncing baby icons -->
     <div class="baby-icons">
-      <span>👶</span> <span>🍼</span> <span>🎀</span> <span>☁️</span>
-       <span>🧸</span> <span>⭐</span> <span>🎈</span>
+      <span>👶</span> <span>🍼</span> <span>🎀</span> <span>🎂</span>
+      <span>🎈</span> <span>🧸</span> <span>⭐</span> <span>☁️</span>
     </div>
 
     <h2>💖 Dipali's Baby Shower RSVP 💙</h2>
-    <p>We can’t wait to celebrate this special day with you! 🎀💙</p>
+    <p><b>We can’t wait to celebrate this special day with you!</b> 🎀💙</p>
 
     <!-- RSVP Form -->
     <form id="rsvp-form" action="https://formspree.io/f/xdkldpwd" method="POST">
       <label for="name">👤 Full Name</label>
       <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-      <label for="email">📧 Email Address</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
       <label for="attending">🎉 Will you attend?</label>
-      <select id="attending" name="attending" required>
+      <select style="width: 105%; height: 50px;" id="attending" name="attending" required>
         <option value="">-- Select --</option>
         <option value="Yes">Yes, I’ll be there 🎊</option>
         <option value="No">Sorry, can’t make it 💌</option>
       </select>
 
-      <label for="guests">👪 Number of Guests (including you)</label>
-      <select id="attending" name="attending" required>
+      <label for="guests">👪 Number of Adult (including you)</label>
+      <select style="width: 105%; height: 50px;" id="attending" size="1" name="attending" required>
         <option value="">-- Select --</option>
-        <option value="Yes">0</option>
-        <option value="Yes">1</option>
-        <option value="Yes">2</option>
-        <option value="Yes">3</option>
-        <option value="Yes">4</option>
-        <option value="Yes">5</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
       </select>
 
       <label for="guests">👪 Number of Children</label>
-       <select id="attending" name="attending" required>
+       <select style="width: 105%; height: 50px;" id="attending" name="attending" required>
         <option value="">-- Select --</option>
-        <option value="Yes">0</option>
-        <option value="Yes">1</option>
-        <option value="Yes">2</option>
-        <option value="Yes">3</option>
-        <option value="Yes">4</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
       </select>
 
       <label for="message">💌 Message for the Parents-to-Be</label>
